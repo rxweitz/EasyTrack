@@ -1,0 +1,27 @@
+# PostgreSQL
+#   gem install pg
+#
+#   Ensure the PostgreSQL gem is defined in your Gemfile
+#   gem 'pg', '0.12.2'
+
+common: &common
+  adapter: postgresql
+  host: localhost
+  username: appdev
+  pool: 5
+  password: password
+
+development:
+  <<: *common
+  database: appdev
+
+test: &test
+  <<: *common
+  database: appdev
+
+production:
+  <<: *common
+  database: appdev
+
+cucumber:
+  <<: *test
