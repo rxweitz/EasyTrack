@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522043017) do
+ActiveRecord::Schema.define(:version => 20130523004958) do
 
   create_table "entries", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,33 @@ ActiveRecord::Schema.define(:version => 20130522043017) do
     t.string   "zip_code"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+  end
+
+  create_table "part_details", :force => true do |t|
+    t.integer  "part_id"
+    t.integer  "part_status_id"
+    t.integer  "location_id"
+    t.integer  "quantity"
+    t.string   "serial_number"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "part_statuses", :force => true do |t|
+    t.string   "part_status"
+    t.text     "status_description"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "parts", :force => true do |t|
+    t.string   "part_name"
+    t.text     "part_description"
+    t.boolean  "serialized"
+    t.string   "mfg_model"
+    t.string   "mfg_part_code"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "people", :force => true do |t|

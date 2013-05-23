@@ -1,4 +1,13 @@
 EasyTrack::Application.routes.draw do
+  resources :part_details
+
+
+  resources :parts
+
+
+  resources :part_statuses
+
+
   resources :location_types
 
 
