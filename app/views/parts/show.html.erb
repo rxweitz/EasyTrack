@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part name:</b>
+  <%= @part.part_name %>
+</p>
+
+<p>
+  <b>Part description:</b>
+  <%= @part.part_description %>
+</p>
+
+<p>
+  <b>Serialized:</b>
+  <%= @part.serialized %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @part.manufacturer %>
+</p>
+
+<p>
+  <b>Mfg model:</b>
+  <%= @part.mfg_model %>
+</p>
+
+<p>
+  <b>Mfg part code:</b>
+  <%= @part.mfg_part_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_part_path(@part) %> |
+<%= link_to 'Back', parts_path %>

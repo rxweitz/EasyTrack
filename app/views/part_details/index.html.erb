@@ -1,0 +1,29 @@
+<h1>Part Details</h1>
+
+<table border="1">
+  <tr>
+    <th>Part</th>
+    <th>Status</th>
+    <th>Location</th>
+    <th>Quantity</th>
+    <th>Serial Number</th>
+    <th>Actions</th>
+  </tr>
+
+<% @part_details.each do |part_detail| %>
+  <tr>
+    <td><%= part_detail.part.part_name %></td>
+    <td><%= part_detail.part_status.part_status %></td>
+    <td><%= part_detail.location.location_name %></td>
+    <td><%= part_detail.quantity %></td>
+    <td><%= part_detail.serial_number %></td>
+    <td><%= link_to 'Show', part_detail %>
+      <%= link_to 'Edit', edit_part_detail_path(part_detail) %>
+      <%= link_to 'Destroy', part_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Part detail', new_part_detail_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  part_status: MyString
+  status_description: MyText
+
+two:
+  part_status: MyString
+  status_description: MyText

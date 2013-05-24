@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part:</b>
+  <%= @part_detail.part.part_name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @part_detail.part_status.part_status %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @part_detail.location.location_name %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @part_detail.quantity %>
+</p>
+
+<p>
+  <b>Serial Number:</b>
+  <%= @part_detail.serial_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_part_detail_path(@part_detail) %> |
+<%= link_to 'Back', part_details_path %>
+
+<%= debug(@part_detail) %>

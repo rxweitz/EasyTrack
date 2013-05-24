@@ -1,0 +1,33 @@
+<h1>Listing parts</h1>
+
+<table>
+  <tr>
+    <th>Part name</th>
+    <th>Part description</th>
+    <th>Serialized</th>
+    <th>Manufacturer</th>
+    <th>Mfg model</th>
+    <th>Mfg part code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @parts.each do |part| %>
+  <tr>
+    <td><%= part.part_name %></td>
+    <td><%= part.part_description %></td>
+    <td><%= part.serialized %></td>
+    <td><%= part.manufacturer %></td>
+    <td><%= part.mfg_model %></td>
+    <td><%= part.mfg_part_code %></td>
+    <td><%= link_to 'Show', part %></td>
+    <td><%= link_to 'Edit', edit_part_path(part) %></td>
+    <td><%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Part', new_part_path %>

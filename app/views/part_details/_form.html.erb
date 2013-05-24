@@ -1,0 +1,37 @@
+<%= form_for(@part_detail) do |f| %>
+  <% if @part_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@part_detail.errors.count, "error") %> prohibited this part_detail from being saved:</h2>
+
+      <ul>
+      <% @part_detail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :part_id %><br />
+    <%= f.select :part_id, Part.all(:order => "part_name").collect {|p| [p.part_name, p.id]} %>
+  </div>
+    <div class="field">
+      <%= f.label :location_id %><br />
+      <%= f.select :location_id, Location.all(:order => "location_name").collect {|l| [l.location_name, l.id]} %>
+    </div>
+    <div class="field">
+      <%= f.label :part_status_id, 'Status' %><br />
+      <%= f.select :part_status_id, PartStatus.all(:order => "part_status").collect {|ps| [ps.part_status, ps.id]} %>
+    </div>
+    <div class="field">
+      <%= f.label :quantity %><br />
+      <%= f.text_field :quantity %>
+    </div>
+    <div class="field">
+      <%= f.label :serial_number %><br />
+      <%= f.text_field :serial_number %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

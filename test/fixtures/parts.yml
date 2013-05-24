@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  part_name: MyString
+  part_description: MyText
+  serialized: false
+  mfg_model: MyString
+  mfg_part_code: MyString
+
+two:
+  part_name: MyString
+  part_description: MyText
+  serialized: false
+  mfg_model: MyString
+  mfg_part_code: MyString

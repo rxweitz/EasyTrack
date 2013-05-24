@@ -1,0 +1,41 @@
+<%= form_for(@part) do |f| %>
+  <% if @part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@part.errors.count, "error") %> prohibited this part from being saved:</h2>
+
+      <ul>
+      <% @part.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :part_name %><br />
+    <%= f.text_field :part_name %>
+  </div>
+  <div class="field">
+    <%= f.label :part_description %><br />
+    <%= f.text_area :part_description %>
+  </div>
+  <div class="field">
+    <%= f.label :serialized %><br />
+    <%= f.check_box :serialized %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br />
+    <%= f.text_field :manufacturer %>
+  </div>
+    <div class="field">
+      <%= f.label :mfg_model %><br />
+      <%= f.text_field :mfg_model %>
+    </div>
+  <div class="field">
+    <%= f.label :mfg_part_code %><br />
+    <%= f.text_field :mfg_part_code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
