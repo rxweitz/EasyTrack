@@ -1,16 +1,14 @@
-<h1>Listing parts</h1>
+<h1>Parts</h1>
 
-<table>
+<table border="1">
   <tr>
-    <th>Part name</th>
-    <th>Part description</th>
+    <th>Part Name</th>
+    <th>Part Description</th>
     <th>Serialized</th>
     <th>Manufacturer</th>
-    <th>Mfg model</th>
-    <th>Mfg part code</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Mfg Model</th>
+    <th>Mfg Part Code</th>
+    <th>Actions</th>
   </tr>
 
 <% @parts.each do |part| %>
@@ -21,9 +19,9 @@
     <td><%= part.manufacturer %></td>
     <td><%= part.mfg_model %></td>
     <td><%= part.mfg_part_code %></td>
-    <td><%= link_to 'Show', part %></td>
-    <td><%= link_to 'Edit', edit_part_path(part) %></td>
-    <td><%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', part %>
+      <%= link_to 'Edit', edit_part_path(part) %>
+      <%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

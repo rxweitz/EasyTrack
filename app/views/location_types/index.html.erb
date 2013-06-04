@@ -1,21 +1,21 @@
-<h1>Listing location_types</h1>
+<h1>Location Types</h1>
 
-<table>
+<table border="1">
   <tr>
     <th>Location type</th>
     <th>Location type description</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Actions</th>
   </tr>
 
 <% @location_types.each do |location_type| %>
   <tr>
     <td><%= location_type.location_type %></td>
     <td><%= location_type.location_type_description %></td>
-    <td><%= link_to 'Show', location_type %></td>
-    <td><%= link_to 'Edit', edit_location_type_path(location_type) %></td>
-    <td><%= link_to 'Destroy', location_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>
+      <%= link_to 'Show', location_type %>
+      <%= link_to 'Edit', edit_location_type_path(location_type) %>
+      <%= link_to 'Destroy', location_type, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
   </tr>
 <% end %>
 </table>

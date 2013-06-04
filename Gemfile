@@ -9,6 +9,7 @@ gem 'validates_existence', '0.8.0'
 
 gem 'pg', '0.12.2'
 
+gem 'rspec-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

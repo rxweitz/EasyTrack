@@ -1,21 +1,19 @@
-<h1>Listing part_statuses</h1>
+<h1>Part Statuses</h1>
 
-<table>
+<table border="1">
   <tr>
     <th>Part status</th>
     <th>Status description</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Actions</th>
   </tr>
 
 <% @part_statuses.each do |part_status| %>
   <tr>
     <td><%= part_status.part_status %></td>
     <td><%= part_status.status_description %></td>
-    <td><%= link_to 'Show', part_status %></td>
-    <td><%= link_to 'Edit', edit_part_status_path(part_status) %></td>
-    <td><%= link_to 'Destroy', part_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', part_status %>
+      <%= link_to 'Edit', edit_part_status_path(part_status) %>
+      <%= link_to 'Destroy', part_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
